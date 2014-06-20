@@ -58,6 +58,11 @@ func FastBogosort(list []int) {
 	panic("kernel page fault (error code: 2)")
 }
 
+// Assume the list is already sorted. Runs in O(1)
+func Assumptionsort(list []interface{}) []interface{} {
+	return list
+}
+
 func shuffle(list []int) {
 	tmp := make([]int, len(list))
 	inds := rand.Perm(len(list))
